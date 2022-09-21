@@ -3,9 +3,8 @@ import { useContext } from 'react';
 import FeedbackItem from "./FeedbackItem";
 import FeedbackContext from '../context/FeedbackContext';
 function FeedbackList() {
-  // console.log("context:", FeedbackContext.feedback);
-  debugger;
-  const [feedback] = useContext(FeedbackContext)
+  const {feedback} = useContext(FeedbackContext);
+
   if (!feedback || feedback.length === 0) {
     console.log(feedback,'feedback')
     return <p>No Feedback Yet</p>;
@@ -26,12 +25,5 @@ function FeedbackList() {
       </AnimatePresence>
     </div>
   );
-  // return (
-  //   <div className="feedback-list">
-  //     {feedback.map((item) => (
-  //       <FeedbackItem key={item.id} item={item} handleDelete = {handleDelete} />
-  //     ))}
-  //   </div>
-  // );
 }
 export default FeedbackList;

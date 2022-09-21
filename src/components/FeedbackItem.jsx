@@ -5,7 +5,8 @@ import FeedbackContext from '../context/FeedbackContext';
 import Card from "./shared/Card";
 
 function FeedbackItem({ item ,}) {
-  const {deleteFeedback, editFeedback} = useContext(FeedbackContext)
+  const {deleteFeedback, editFeedback} = useContext(FeedbackContext);
+  
   return (
     <Card>
       <div className="num-display">{item.rating}</div>
